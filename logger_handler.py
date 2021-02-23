@@ -2,14 +2,16 @@
 # coding:utf-8
 
 import logging
-
+import os
 
 LOG_FORMAT = '%(asctime)s - %(levelname)s - %(filename)s - %(funcName)s - %(message)s'
+
+LOG_PATH = 'logs'
 
 config = {
     'name': 'xmind2xml',
     'level': 'DEBUG',
-    'file': 'logs/all.log',
+    'file': LOG_PATH+'/all.log',
     'format': LOG_FORMAT
 }
 
@@ -25,6 +27,9 @@ class LoggerHandler(logging.Logger):
         # fmt.asctime_format()
         #
         if file:
+            # 如果日志路径不存在，则新建
+            if not os.path.exists(LOG_PATH):
+                os.makedirs(LOG_PATH)
             file_handler = logging.FileHandler(file, encoding='utf-8')
             file_handler.setLevel(level)
             file_handler.setFormatter(fmt)

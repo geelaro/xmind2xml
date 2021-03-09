@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuite name="doc/v1.2话术库">
+	<testsuite name="权限管理">
+		<testcase name="配置话术库页面权限">
+			<summary/>
+			<preconditions/>
+			<execution_type>1</execution_type>
+			<importance>2</importance>
+			<steps>
+				<step>
+					<actions>
+<![CDATA[总管理用户]]>					</actions>
+					<expectedresults/>
+					<step_number>1</step_number>
+				</step>
+				<execution_type>1</execution_type>
+				<step>
+					<actions>
+<![CDATA[普通用户]]>					</actions>
+					<expectedresults/>
+					<step_number>2</step_number>
+				</step>
+				<execution_type>1</execution_type>
+			</steps>
+		</testcase>
+		<testcase name="不配置话术库页面权限">
+			<summary/>
+			<preconditions/>
+			<execution_type>1</execution_type>
+			<importance>2</importance>
+			<steps>
+				<step>
+					<actions>
+<![CDATA[总管理]]>					</actions>
+					<expectedresults/>
+					<step_number>1</step_number>
+				</step>
+				<execution_type>1</execution_type>
+				<step>
+					<actions>
+<![CDATA[普通用户]]>					</actions>
+					<expectedresults/>
+					<step_number>2</step_number>
+				</step>
+				<execution_type>1</execution_type>
+			</steps>
+		</testcase>
+	</testsuite>
+	<testsuite name="话书库管理">
+		<testcase name="总管理用户进入">
+			<summary/>
+			<preconditions/>
+			<execution_type>1</execution_type>
+			<importance>2</importance>
+		</testcase>
+		<testcase name="非总管理用户进入">
+			<summary/>
+			<preconditions/>
+			<execution_type>1</execution_type>
+			<importance>2</importance>
+		</testcase>
+	</testsuite>
+	<testsuite name="分支主题 3"/>
+</testsuite>
